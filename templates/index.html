@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Companies</title>
+</head>
+
+<body>
+    <div class="container my-3">
+        <h6 class="border-bottom pb-2 mb-0">Company-List</h6>
+        <div class="container">
+            <div class="my-2 p-2 bg-body rounded shadow-sm">
+                <div class="d-flex text-muted pt-3">
+                    <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                        
+                        {% for job in jobs %}
+                        <div class="justify-content-between">
+                            <script></script>
+                            <strong name="jobtitle" class="text-gray-dark">Company: </strong>
+                            <a href="#"> {{job.company}} </a>
+                            <p name="category" id="category" class="d-block my-2"><strong>Position: </strong> {{job.job_position}}</p>
+                            <p name="subcategory" id="subcategory" class="d-block"><strong>Location: </strong> {{job.location}}</p>
+                            <hr />
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
