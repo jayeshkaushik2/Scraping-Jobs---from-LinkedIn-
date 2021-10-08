@@ -1,0 +1,34 @@
+{% extends 'mainlayout.html' %}
+{% block title%} Jobs detail {% endblock title %}
+
+{% block body %}
+
+<div class="container my-3">
+    <h6 class="border-bottom pb-2 mb-0">Jobs | {{category}} </h6>
+    <div class="container">
+        <div class="my-2 p-2 bg-body rounded shadow-sm">
+            <div class="d-flex text-muted pt-3">
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+
+                    {% for job in job_details %}
+                    <div class="justify-content-between">
+                        <script></script>
+                        <strong name="jobtitle" class="text-gray-dark">Company: </strong>
+                        <a href="{{job.job_url}}" target="_blank"> {{job.company}} </a>
+                        <p name="tractorName" id="tractorName" class="d-block">
+                            <br>
+                             Job position: {{job.job_position}}
+                             <br>
+                             location: {{job.location}}
+                        </p>
+                        <hr />
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

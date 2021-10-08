@@ -1,9 +1,9 @@
 {% extends 'mainlayout.html' %}
-{% block title%} Home {% endblock title %}
+{% block title%} Job Categories {% endblock title %}
 
 {% block body %} 
-    <div class="container my-3">
-        <h6 class="border-bottom pb-2 mb-0">Company-List</h6>
+<div class="container my-3">
+        <h6 class="border-bottom pb-2 mb-0">Categories</h6>
         <div class="container">
             <div class="my-2 p-2 bg-body rounded shadow-sm">
                 <div class="d-flex text-muted pt-3">
@@ -12,9 +12,9 @@
                         {% for cate in category %}
                         <div class="justify-content-between">
                             <script></script>
-                            <strong name="jobtitle" class="text-gray-dark">Job Category:</strong>
-                            <a href="/sub_category?={{cate}}"> {{cate}} </a>
-                            <hr/>
+                            <strong name="jobtitle" class="text-gray-dark">Category: </strong>
+                            <a name="{{cate.job_category}}" href="/sub_category?={{cate.job_category}}"> {{cate.job_category}} </a>
+                            <hr />
                         </div>
                         {% endfor %}
 
